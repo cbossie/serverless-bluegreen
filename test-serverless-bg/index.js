@@ -6,7 +6,7 @@ const promises = [];
 var count = 0;
 const num = 500;
 
-const hostname = 'https://0z24hak9v7.execute-api.us-east-1.amazonaws.com/dev/hello';
+const hostname = 'https://0z24hak9v7.execute-api.us-east-1.amazonaws.com/dev/demo';
 
 const makeCall = async () => {
     let retval = await axios.default.get(hostname);

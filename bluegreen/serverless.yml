@@ -22,12 +22,12 @@ custom:
       - prod
 
 functions:
-  hello:
-    handler: handler.hello
+  demo:
+    handler: handler.demo
     environment:
-      VERSION: 5
+      VERSION: 6
     events:
-      - http: GET hello
+      - http: GET demo
     alarms:
       - name: foo
         namespace: 'AWS/Lambda'
@@ -43,7 +43,7 @@ functions:
       preTrafficHook: preHook
       postTrafficHook: postHook
       alarms:
-        - HelloFooAlarm
+        - DemoFooAlarm
   preHook:
     handler: hooks.pre
   postHook:

@@ -20,7 +20,7 @@ $ sls deploy -s dev
 When you call your newly created endpoint, you should see the following message:
 
 ```console
-$ curl https://yourendpoint.com/dev/hello
+$ curl https://yourendpoint.com/dev/demo
 {"message":"First version"}
 ```
 
@@ -28,16 +28,16 @@ To check how traffic is shifted gradually, modify `handler.js` and deploy your s
 
 ```console
 $ sls deploy -s dev
-$ curl https://yourendpoint.com/dev/hello
+$ curl https://yourendpoint.com/dev/demo
 {"message":"First version"}
-$ curl https://yourendpoint.com/dev/hello
+$ curl https://yourendpoint.com/dev/demo
 {"message":"Second version"}
 ```
 
 If we wanted to check how our deployment rolls back to the previous version, we need to set off the alarm. Calling the endpoint with `error` as a query parameter will cause the function with error status.
 
 ```console
-$ curl https://yourendpoint.com/dev/hello?error=true
+$ curl https://yourendpoint.com/dev/demo?error=true
 {"message": "Internal server error"}
 ```
 
